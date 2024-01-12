@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu vertical responsivo</title>
+    <!-- defino el boton para la pantralla mobile-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--se define la hoja de estilos css-->
+    <link rel="stylesheet" href="stylebarra.css">
+</head>
+
+<!--body de la pag  web-->
+<body>
+    <!--navegacion de la barra de la pagina-->
+    <nav>
+        <!--seccion de la parte mobile-->
+        <div class="mobile">
+            <div class="header">
+               <div class="logo">logo</div> 
+               <!-- boton para la parte mobile con sus clases e id-->
+               <div class="more"><button id="bMore"><span class="material-symbols-outlined">
+                menu
+                </span></button></div>
+            </div>
+            <!--contenido que tendra la parte mobile-->
+            <div id="links" class="links">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+        <!-- Div para pa seccion de escritorio-->
+        <div class="desktop">
+            <div class="logo">logo</div>
+            <!-- division para la seccion principal del contenido a responsive-->
+            <div class="primary">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <!-- division para la parte secundaria completa de escritorio-->
+            <div class="secondary full">
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+            <!-- division para la parte reducida de la barra en el escriorio -->
+            <div class="secondary mini">
+                <a href="#" class="more">more</a>
+                <div class="submenu">
+                    <a href="#">Search</a>
+                    <a href="#">Sign up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!--parte scrip para ocultar la parte mobile del menu-->
+    <script>
+        const bMore = document.querySelector("#bMore");
+        const links = document.querySelector("#links");
+       
+        bMore.addEventListener("click", (e)=> {
+            links.classList.toggle("collapsed");
+        });
+
+        
+    </script>
+</body>
+</html>
